@@ -1,0 +1,11 @@
+{
+	"presets": [
+		["env", { "modules": false }],
+		"react",
+	],
+	"plugins": [
+		"transform-export-extensions",
+		"transform-decorators-legacy",
+		"syntax-dynamic-import",
+	]
+}

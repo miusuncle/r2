@@ -1,0 +1,36 @@
+{
+	"scripts": {
+		"clean-dist": "rimraf dist",
+		"wds": "rimraf dist/debug && cd webpack && webpack-dev-server --progress --env.target=debug --env.dev",
+		"dev": "npm run build-debug -- --watch",
+		"build-debug": "rimraf dist/debug && cd webpack && webpack --progress --env.target=debug",
+		"build-release": "rimraf dist/release && cd webpack && webpack --progress --env.target=release --env.uglifyjs",
+		"serve": "nodemon launch.js"
+	},
+	"devDependencies": {
+		"assets-webpack-plugin": "^3.5.1",
+		"babel-core": "^6.24.1",
+		"babel-loader": "^7.0.0",
+		"babel-plugin-syntax-dynamic-import": "^6.18.0",
+		"babel-plugin-transform-decorators-legacy": "^1.3.4",
+		"babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+		"babel-plugin-transform-export-extensions": "^6.22.0",
+		"babel-preset-env": "^1.5.1",
+		"babel-preset-react": "^6.24.1",
+		"babel-register": "^6.24.1",
+		"deepmerge": "^1.3.2",
+		"lodash": "^4.17.4",
+		"nodemon": "^1.11.0",
+		"rimraf": "^2.6.1",
+		"webpack": "^2.6.1",
+		"webpack-dev-server": "^2.4.5"
+	},
+	"dependencies": {
+		"app-module-path": "^2.2.0",
+		"babel-polyfill": "^6.23.0",
+		"react": "^15.5.4",
+		"react-dom": "^15.5.4",
+		"react-redux": "^5.0.5",
+		"redux": "^3.6.0"
+	}
+}
